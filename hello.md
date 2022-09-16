@@ -1,14 +1,8 @@
-## Hello
 
-**MyText**
 
 [import create reaxt app](http://mysite.com/)
 
-* Elem 1
-* Elem 2
-* Elem 3
 
-## `Hello from me`
 
 ## Документация в проекте.
 О необходимости использования документации при написании приложений написана не одна статья.
@@ -38,6 +32,22 @@ endpoint - ов.
 * У нас есть, какие-то модели которые описывают наши модели и их отношения; 
 * У нас есть какие-то routes(маршруты), имеющие вид CRUD; 
 * У нас есть какая-то папка для создания наших классов контроллеров.
+
+## Установка
+И так установим для нашего проекта [swagger-Jsdoc](https://www.npmjs.com/package/swagger-jsdoc) и [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express)
+
+### `npm i swagger-ui-express  swagger-jsdoc`
+
+Теперь добавим **swagger** в проект: 
+
+**const swaggerUi = require('swagger-ui-express');**
+
+**const swaggerJsdoc = require('swagger-jsdoc')**
+
+Отлично, мы стали на шаг универсальнее! Теперь создадим конфигурационный файл и сконфигурируем наш сервер, будем использовать наш сервер разработки.
+Создадим файл **swaggerOptions.js**
+
+
 
 
 
