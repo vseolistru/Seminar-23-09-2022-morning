@@ -40,9 +40,9 @@ endpoint - ов.
 
 Теперь добавим **swagger** в проект: 
 
-**const swaggerUi = require('swagger-ui-express');**
+### `const swaggerUi = require('swagger-ui-express');`
 
-**const swaggerJsdoc = require('swagger-jsdoc')**
+### `const swaggerJsdoc = require('swagger-jsdoc')`
 
 Отлично, мы стали на шаг универсальнее! Теперь создадим конфигурационный файл и сконфигурируем наш сервер, будем использовать наш сервер разработки.
 Создадим файл **swaggerOptions.js**
@@ -73,7 +73,27 @@ endpoint - ов.
 какая папка будет доступна для сбора документации swagger, объект экспортируется для использования в основной конфигурации 
 сервера.
 
+Импортируем наш объект в server: 
+### `const options = require('./swaggerOption');`
 
+Создаем спцификацию:
+### `const specs = swaggerJsdoc(options)`
+
+***Инициализируем express:***
+
+### `const app = express();`
+
+***Запускаем сервер с документатором:***
+
+### `app.use('/swagger', swaggerUi.serve, swaggerUi.setup(specs))`
+
+***сервер будет запущен по адресу [swagger](http://localhost:4000/swagger/)*** 
+
+![Пример инициализации сервера](./img/pic_swaggerApp.jpg)
+
+На изображении показан пример инициализации сервера 
+
+### Синтаксис и работа с сервером swagger.
 
 
 
