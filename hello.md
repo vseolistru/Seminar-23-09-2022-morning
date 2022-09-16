@@ -48,6 +48,33 @@ endpoint - ов.
 Создадим файл **swaggerOptions.js**
 
 
+![Пример создания и конфигурации сервера](./img/pic_swaggerOpts.jpg)
+
+Добавим конфигурацию для сервера:
+данная конфигурация не является исчерпывающей, с другими примерами можно ознакомится на [swagger-Jsdoc](https://www.npmjs.com/package/swagger-jsdoc)
+
+### Пример конфигурации  
+     const options = {
+        definition: {
+            openapi: '3.0.0',
+            info: {
+                title: 'eStore documentation',
+                version: '1.0.01',
+            },
+            servers:[{url: 'http//localhost:4000'}],
+        },
+        apis: ['./routes/*.js'], 
+     };
+
+     module.exports = options
+
+Тут мы используем json объект - options в коде инициализируется документация swagger ***openapi 3.0.0***, 
+в поле title и version, будут отображатся в вашем сервере. В поле ***apis*** также идет прямое указание 
+какая папка будет доступна для сбора документации swagger, объект экспортируется для использования в основной конфигурации 
+сервера.
+
+
+
 
 
 
