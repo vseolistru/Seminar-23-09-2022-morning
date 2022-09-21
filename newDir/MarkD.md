@@ -38,7 +38,7 @@
 
 Для отправки почты пользователям используем **nodemailer**
 
-Установим для нашего проекта [jsonwebtoken](https://www.npmjs.com/package/nodemailer)
+Установим для нашего проекта [nodemailer](https://www.npmjs.com/package/nodemailer)
 
 ## Работа с таблицами 
 
